@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 
 import type { Metadata } from "next";
 
-import { Footer } from "@/components/blocks/footer";
-import { Navbar } from "@/components/blocks/navbar";
+import { FooterGurbetci } from "@/components/blocks/footer-gurbetci";
+import { NavbarGurbetci } from "@/components/blocks/navbar-gurbetci";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
@@ -63,29 +63,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mainline - Modern Next.js Template",
-    template: "%s | Mainline",
+    default: "Gurbetci SuperApp - Polonya'daki Türk Gurbetçiler İçin",
+    template: "%s | Gurbetci",
   },
   description:
-    "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+    "Haberler, ilanlar, mekanlar, forum ve daha fazlası. Polonya'da yaşayan Türk gurbetçiler için her şey bir arada!",
   keywords: [
-    "Next.js",
-    "nextjs template",
-    "nextjs theme",
-    "nextjs starter",
-    "shadcn template",
-    "shadcn theme",
-    "shadcn starter",
-    "tailwind template",
-    "tailwind theme",
-    "tailwind starter",
-    "mdx template",
-    "mdx theme",
-    "mdx starter",
+    "gurbetci",
+    "polonya",
+    "türk",
+    "haberler",
+    "ilan",
+    "mekanlar",
+    "forum",
+    "warszawa",
+    "türk gurbetçiler",
+    "polonya türkler",
   ],
-  authors: [{ name: "shadcnblocks.com" }],
-  creator: "shadcnblocks.com",
-  publisher: "shadcnblocks.com",
+  authors: [{ name: "Gurbetci SuperApp Team" }],
+  creator: "Gurbetci SuperApp",
+  publisher: "Gurbetci SuperApp",
   robots: {
     index: true,
     follow: true,
@@ -102,26 +99,27 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon/favicon.ico" }],
   },
   openGraph: {
-    title: "Mainline - Modern Next.js Template",
+    title: "Gurbetci SuperApp",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
-    siteName: "Mainline",
+      "Polonya'daki Türk gurbetçiler için süper uygulama. Haberler, ilanlar, mekanlar ve daha fazlası.",
+    siteName: "Gurbetci",
+    type: "website",
+    locale: "tr_TR",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mainline - Modern Next.js Template",
+        alt: "Gurbetci SuperApp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mainline - Modern Next.js Template",
+    title: "Gurbetci SuperApp",
     description:
-      "A modern Next.js template built with shadcn/ui, Tailwind & MDX. Open source - MIT License.",
+      "Polonya'daki Türk gurbetçiler için süper uygulama",
     images: ["/og-image.jpg"],
-    creator: "@ausrobdev",
   },
 };
 
@@ -131,7 +129,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="tr" suppressHydrationWarning>
       <head>
         <script
           async
@@ -147,9 +145,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <StyleGlideProvider />
-          <Navbar />
+          <NavbarGurbetci />
           <main className="">{children}</main>
-          <Footer />
+          <FooterGurbetci />
         </ThemeProvider>
       </body>
     </html>
