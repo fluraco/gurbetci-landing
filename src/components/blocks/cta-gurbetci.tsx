@@ -1,6 +1,3 @@
-import { Apple, ArrowRight, Play } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
 
 export const CTAGurbetci = () => {
   return (
@@ -8,7 +5,7 @@ export const CTAGurbetci = () => {
       <div className="container">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            Gurbetçi Ailesine Katılın!
+            Gurbetci Ailesine Katılın!
           </h2>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -16,37 +13,13 @@ export const CTAGurbetci = () => {
             topluluğumuzun bir parçası olun.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button
-              size="lg"
-              className="group w-full sm:w-auto"
-              asChild
-            >
-              <a href="#" className="flex items-center">
-                <Apple className="mr-2 w-5 h-5" />
-                <div className="text-left">
-                  <div className="text-xs opacity-70">İndir</div>
-                  <div className="text-sm font-semibold">App Store</div>
-                </div>
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="group w-full sm:w-auto"
-              asChild
-            >
-              <a href="#" className="flex items-center">
-                <Play className="mr-2 w-5 h-5 fill-current" />
-                <div className="text-left">
-                  <div className="text-xs opacity-70">İndir</div>
-                  <div className="text-sm font-semibold">Google Play</div>
-                </div>
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+            <a href="https://apps.apple.com/tr/app/gurbetci-superapp/id6754301307" target="_blank" rel="noopener noreferrer">
+              <img src="/appstore.webp" alt="App Store'dan İndir" className="h-14 sm:h-16 hover:opacity-80 transition-opacity" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.gurbetci.app" target="_blank" rel="noopener noreferrer">
+              <img src="/googleplay.webp" alt="Google Play'den İndir" className="h-14 sm:h-16 hover:opacity-80 transition-opacity" />
+            </a>
           </div>
 
           {/* Trust Indicators */}
@@ -57,7 +30,7 @@ export const CTAGurbetci = () => {
               <div className="text-yellow-500">★★★★★</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-foreground">10K+</div>
+              <div className="text-3xl font-bold text-foreground">1K+</div>
               <div className="text-sm text-muted-foreground">İndirme</div>
             </div>
             <div>

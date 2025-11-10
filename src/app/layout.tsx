@@ -63,11 +63,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Gurbetci SuperApp - Polonya'daki Türk Gurbetçiler İçin",
+    default: "Gurbetci SuperApp - Avrupa'daki Türk Gurbetçiler İçin",
     template: "%s | Gurbetci",
   },
   description:
-    "Haberler, ilanlar, mekanlar, forum ve daha fazlası. Polonya'da yaşayan Türk gurbetçiler için her şey bir arada!",
+    "Haberler, ilanlar, mekanlar, forum ve daha fazlası. Avrupa'da yaşayan Türk gurbetçiler için her şey bir arada!",
   keywords: [
     "gurbetci",
     "polonya",
@@ -89,19 +89,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon/favicon.ico", sizes: "48x48" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon/favicon.ico" },
+      { url: "/logos/gurbetciicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/logos/gurbetciicon.png", sizes: "96x96", type: "image/png" },
     ],
-    apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
-    shortcut: [{ url: "/favicon/favicon.ico" }],
+    apple: [{ url: "/logos/gurbetciicon.png", sizes: "180x180" }],
+    shortcut: [{ url: "/logos/gurbetciicon.png" }],
   },
   openGraph: {
     title: "Gurbetci SuperApp",
     description:
-      "Polonya'daki Türk gurbetçiler için süper uygulama. Haberler, ilanlar, mekanlar ve daha fazlası.",
+      "Avrupa'daki Türk gurbetçiler için süper uygulama. Haberler, ilanlar, mekanlar ve daha fazlası.",
     siteName: "Gurbetci",
     type: "website",
     locale: "tr_TR",
@@ -118,7 +115,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gurbetci SuperApp",
     description:
-      "Polonya'daki Türk gurbetçiler için süper uygulama",
+      "Avrupa'daki Türk gurbetçiler için süper uygulama",
     images: ["/og-image.jpg"],
   },
 };

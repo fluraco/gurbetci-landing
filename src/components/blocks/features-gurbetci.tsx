@@ -16,22 +16,22 @@ import { Card, CardContent } from "@/components/ui/card";
 const items = [
   {
     title: "Güncel Haberler",
-    description: "Polonya haberlerini Türkçe çevirisiyle takip edin. Gündem, teknoloji, spor ve daha fazlası.",
+    description: "Ülkenizdeki güncel haberleri Türkçe çevirisiyle takip edin. Gündem, teknoloji, spor ve daha fazlası.",
     icon: Newspaper,
   },
   {
     title: "İlan Sistemi",
-    description: "Alım-satım, emlak, iş ilanları. Güvenli ve kolay ilan yayınlayın.",
+    description: "Alım-satım, emlak, iş ilanları ve diğer her şey. Ücretsiz ve kolay ilan yayınlayın.",
     icon: ShoppingBag,
   },
   {
     title: "Mekanlar",
-    description: "Türk restoranları, marketleri ve işletmeleri keşfedin.",
+    description: "Bulunduğunuz bölgedeki Türk restoranları, marketleri, gezilecek yerleri ve işletmeleri keşfedin.",
     icon: MapPin,
   },
   {
     title: "Forum",
-    description: "Gurbetçi topluluğuyla iletişime geçin. Sorularınızı sorun.",
+    description: "Gurbetci topluluğuyla iletişime geçin. Sorularınızı sorun, forumda istediğinizi paylaşın.",
     icon: MessageCircle,
   },
   {
@@ -40,8 +40,8 @@ const items = [
     icon: Users,
   },
   {
-    title: "Güvenli",
-    description: "Telefon doğrulama, kullanıcı değerlendirmeleri ve güvenlik önlemleri.",
+    title: "Mesajlaşma",
+    description: "İnsanlarla kişisel sohbetler oluşturun, sesli veya metinli görüşmeleri güvenle yapın.",
     icon: Shield,
   },
   {
@@ -50,8 +50,8 @@ const items = [
     icon: Bell,
   },
   {
-    title: "Modern UI",
-    description: "Kullanıcı dostu, modern ve hızlı bir deneyim.",
+    title: "Tamamen Ücretsiz",
+    description: "Kullanıcı dostu, modern ve hızlı bir deneyim. Tamamen ücretsiz kullanın.",
     icon: Sparkles,
   },
 ];
@@ -71,10 +71,10 @@ export const FeaturesGurbetci = () => {
         {/* Content */}
         <div className="mx-auto mt-10 grid max-w-4xl items-center gap-3 md:gap-0 lg:mt-24 lg:grid-cols-2">
           <h2 className="text-2xl tracking-tight md:text-4xl lg:text-5xl">
-            Polonya'da yaşamınızı kolaylaştırın
+            Avrupa'da <br></br>yaşamınızı kolaylaştırın
           </h2>
           <p className="text-muted-foreground leading-snug">
-            Gurbetci SuperApp, Polonya'da yaşayan Türk gurbetçiler için özel olarak tasarlanmış
+            Gurbetci SuperApp, Avrupa'da yaşayan Türk gurbetçiler için özel olarak tasarlanmış
             bir süper uygulamadır. Haberlerden ilanlara, mekanlardan foruma kadar her şey burada.
           </p>
         </div>

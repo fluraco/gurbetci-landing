@@ -7,12 +7,11 @@ import {
 } from "lucide-react";
 
 import { DashedLine } from "@/components/dashed-line";
-import { Button } from "@/components/ui/button";
 
 const features = [
   {
     title: "Güncel Haberler",
-    description: "Polonya haberlerini Türkçe çevirisiyle takip edin",
+    description: "Ülkedeki haberleri Türkçe çevirisiyle takip edin",
     icon: Newspaper,
   },
   {
@@ -27,7 +26,7 @@ const features = [
   },
   {
     title: "Forum & Topluluk",
-    description: "Gurbetçi topluluğuyla iletişime geçin",
+    description: "Gurbetci topluluğuyla iletişime geçin",
     icon: MessageCircle,
   },
 ];
@@ -43,43 +42,31 @@ export const HeroGurbetci = () => {
           </h1>
 
           <p className="text-muted-foreground text-1xl mt-5 md:text-3xl">
-            Polonya'daki Türk gurbetçiler için her şey bir arada! Haberler, ilanlar, mekanlar, forum ve daha fazlası
+            Avrupa'daki Türk gurbetçiler için her şey bir arada! Haberler, ilanlar, mekanlar, forum ve daha fazlası
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
-            <Button asChild size="lg">
-              <a href="#download">
-                App Store'dan İndir
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="from-background h-auto gap-2 bg-linear-to-r to-transparent shadow-md"
-              asChild
-            >
-              <a
-                href="#download"
-                className="max-w-56 truncate text-start md:max-w-none"
-              >
-                Google Play'den İndir
-              </a>
-            </Button>
+            <a href="https://apps.apple.com/tr/app/gurbetci-superapp/id6754301307" target="_blank" rel="noopener noreferrer">
+              <img src="/appstore.webp" alt="App Store'dan İndir" className="h-12 sm:h-14 hover:opacity-80 transition-opacity" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.gurbetci.app" target="_blank" rel="noopener noreferrer">
+              <img src="/googleplay.webp" alt="Google Play'den İndir" className="h-12 sm:h-14 hover:opacity-80 transition-opacity" />
+            </a>
           </div>
 
           {/* Stats */}
           <div className="mt-12 grid grid-cols-3 gap-6">
             <div>
-              <div className="text-3xl font-bold text-foreground">10K+</div>
+              <div className="text-3xl font-bold text-foreground">100+</div>
               <div className="text-sm text-muted-foreground">Kullanıcı</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-foreground">5K+</div>
+              <div className="text-3xl font-bold text-foreground">10+</div>
               <div className="text-sm text-muted-foreground">İlan</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-foreground">1K+</div>
-              <div className="text-sm text-muted-foreground">Mekan</div>
+              <div className="text-3xl font-bold text-foreground">100+</div>
+              <div className="text-sm text-muted-foreground">İşletme</div>
             </div>
           </div>
         </div>
@@ -114,15 +101,6 @@ export const HeroGurbetci = () => {
       </div>
 
       {/* App Preview Image */}
-      <div className="mt-12 max-lg:ml-6 max-lg:h-[550px] max-lg:overflow-hidden md:mt-20 lg:container lg:mt-24">
-        <div className="relative h-[793px] w-full bg-muted rounded-2xl flex items-center justify-center shadow-lg max-lg:rounded-tr-none border">
-          <Smartphone className="w-32 h-32 md:w-48 md:h-48 text-muted-foreground/20" />
-          <div className="absolute bottom-10 left-10">
-            <p className="text-2xl md:text-4xl font-bold mb-2">Mobil Odaklı Tasarım</p>
-            <p className="text-lg md:text-xl text-muted-foreground">iOS ve Android için optimize edildi</p>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

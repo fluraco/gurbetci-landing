@@ -5,17 +5,12 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Apple, Play } from "lucide-react";
-
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { label: "Özellikler", href: "#features" },
   { label: "Uygulama", href: "#app" },
-  { label: "SSS", href: "#faq" },
-  { label: "İletişim", href: "#contact" },
 ];
 
 export const NavbarGurbetci = () => {
@@ -31,9 +26,11 @@ export const NavbarGurbetci = () => {
     >
       <div className="flex items-center justify-between px-6 py-3">
         <Link href="/" className="flex shrink-0 items-center gap-2">
-          <div className="w-10 h-10 rounded-xl bg-foreground flex items-center justify-center">
-            <span className="text-background font-bold text-xl">G</span>
-          </div>
+          <img 
+            src="/logos/gurbetciicon.png" 
+            alt="Gurbetci Logo" 
+            className="w-10 h-10 rounded-xl"
+          />
           <span className="text-xl font-bold">
             Gurbetci
           </span>
@@ -58,10 +55,8 @@ export const NavbarGurbetci = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <Link href="#download" className="max-lg:hidden">
-            <Button variant="outline">
-              <span className="relative z-10">İndir</span>
-            </Button>
+          <Link href="#download" className="max-lg:hidden px-4 py-2 text-sm font-medium border border-border rounded-lg hover:bg-muted transition-colors">
+            İndir
           </Link>
 
           {/* Hamburger Menu Button (Mobile Only) */}
@@ -103,7 +98,7 @@ export const NavbarGurbetci = () => {
               key={link.label}
               href={link.href}
               className={cn(
-                "text-primary hover:text-primary/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0",
+                "text-foreground hover:text-foreground/80 py-4 text-base font-medium transition-colors first:pt-0 last:pb-0",
                 pathname === link.href && "text-muted-foreground",
               )}
               onClick={() => setIsMenuOpen(false)}
@@ -112,19 +107,13 @@ export const NavbarGurbetci = () => {
             </Link>
           ))}
         </nav>
-        <div className="mt-6 pt-6 border-t space-y-2">
-          <Button className="w-full" asChild>
-            <a href="#download">
-              <Apple className="mr-2 w-4 h-4" />
-              App Store
-            </a>
-          </Button>
-          <Button className="w-full" variant="outline" asChild>
-            <a href="#download">
-              <Play className="mr-2 w-4 h-4 fill-current" />
-              Google Play
-            </a>
-          </Button>
+        <div className="mt-6 pt-6 border-t space-y-3 flex flex-col items-center">
+          <a href="https://apps.apple.com/tr/app/gurbetci-superapp/id6754301307" target="_blank" rel="noopener noreferrer" className="w-full">
+            <img src="/appstore.webp" alt="App Store'dan İndir" className="w-full max-w-[200px] mx-auto hover:opacity-80 transition-opacity" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.gurbetci.app" target="_blank" rel="noopener noreferrer" className="w-full">
+            <img src="/googleplay.webp" alt="Google Play'den İndir" className="w-full max-w-[200px] mx-auto hover:opacity-80 transition-opacity" />
+          </a>
         </div>
       </div>
     </section>

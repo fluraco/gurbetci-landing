@@ -1,23 +1,25 @@
-import { Smartphone } from "lucide-react";
-
 import { DashedLine } from "../dashed-line";
 
 const screenshots = [
   {
-    title: "Haberler",
-    description: "Güncel Polonya haberleri",
+    title: "Sosyal",
+    description: "Güncel Avrupa haberleri",
+    image: "/mockups/social.png",
   },
   {
     title: "İlanlar",
     description: "Alım-satım ve daha fazlası",
+    image: "/mockups/ilan.png",
   },
   {
-    title: "Mekanlar",
+    title: "İşletmeler",
     description: "Türk işletmeleri keşfet",
+    image: "/mockups/isletme.png",
   },
   {
-    title: "Forum",
+    title: "Mesajlaşma",
     description: "Toplulukla bağlan",
+    image: "/mockups/chat.png",
   },
 ];
 
@@ -53,27 +55,26 @@ export const AppPreviewGurbetci = () => {
               {/* Phone Mockup */}
               <div className="relative bg-foreground rounded-[2rem] p-2 shadow-2xl group-hover:scale-105 transition-transform duration-300">
                 <div className="bg-background rounded-[1.5rem] overflow-hidden aspect-[9/19]">
-                  <div className="h-full bg-muted flex flex-col items-center justify-center p-4">
-                    <Smartphone className="w-16 h-16 text-foreground/80 mb-4" />
-                    <h3 className="text-foreground font-semibold text-lg text-center mb-1">
-                      {screen.title}
-                    </h3>
-                    <p className="text-muted-foreground text-xs text-center">
-                      {screen.description}
-                    </p>
-                  </div>
+                  <img 
+                    src={screen.image} 
+                    alt={screen.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+              </div>
+              {/* Title and Description */}
+              <div className="text-center mt-4 space-y-1">
+                <h3 className="text-foreground font-semibold text-lg">
+                  {screen.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {screen.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom Text */}
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground text-sm">
-            iOS ve Android için optimize edilmiş, hızlı ve akıcı deneyim
-          </p>
-        </div>
       </div>
     </section>
   );
