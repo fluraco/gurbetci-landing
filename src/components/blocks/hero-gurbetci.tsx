@@ -1,5 +1,4 @@
 import {
-  Smartphone,
   Newspaper,
   ShoppingBag,
   MapPin,
